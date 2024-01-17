@@ -35,7 +35,7 @@ export const Result = () => {
         quizList={state.quiz}
         selectedAnswer={state.selectedAnswer}
       />
-      <div className={className}>Your scored {score} is 5</div>
+      <div className={className}>Your scored {score} out of 5</div>
       <Button id="creatBtn" onClick={() => navigate("/")}>
         Create a new Quiz
       </Button>

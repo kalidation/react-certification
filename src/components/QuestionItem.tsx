@@ -32,19 +32,21 @@ export const QuestionItem = (props: IProps) => {
     <div>
       <div> {question} </div>
       <ButtonGroup>
-        {[...incorrectAnswer, correctAnswer].map((answer, index) => (
-          <AnswerItem
-            key={answer}
-            questionId={questionId}
-            answerId={index}
-            answer={answer}
-            correctAnswer={correctAnswer}
-            checked={answer === getSelectedAnswer()?.answer}
-            isResult={isResult}
-            handleOnChange={handleChangeAnswer}
-            handleScore={handleScore}
-          />
-        ))}
+        {[...incorrectAnswer, correctAnswer]
+          .sort((a, b) => 0.5 - Math.random())
+          .map((answer, index) => (
+            <AnswerItem
+              key={answer}
+              questionId={questionId}
+              answerId={index}
+              answer={answer}
+              correctAnswer={correctAnswer}
+              checked={answer === getSelectedAnswer()?.answer}
+              isResult={isResult}
+              handleOnChange={handleChangeAnswer}
+              handleScore={handleScore}
+            />
+          ))}
       </ButtonGroup>
     </div>
   );
