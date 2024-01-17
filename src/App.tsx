@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="container">
       <Routes>
-        <Route path="/react-certification/" element={<Home />} />
+        <Route index path="/react-certification/" element={<Home />} />
         <Route path="/react-certification/result" element={<Result />} />
       </Routes>
     </div>
