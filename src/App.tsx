@@ -8,11 +8,10 @@ import { Result } from "./pages/Result/Result";
 function App() {
   return (
     <div className="container">
-      <h1>NIK ZBI</h1>
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/result" element={<Result />} />
-      </Routes> */}
+      <Routes>
+        <Route path="/react-certification/" element={<Home />} />
+        <Route path="/react-certification/result" element={<Result />} />
+      </Routes>
     </div>
   );
 }
