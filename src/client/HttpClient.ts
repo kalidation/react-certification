@@ -1,5 +1,5 @@
 export const BASE_API_URL: string =
-  process.env.REACT_APP_BACKEND_URL ??
+  process.env.VITE_REACT_APP_BACKEND_URL ??
   "https://opentdb.com";
 
 enum ERequestMethod {
