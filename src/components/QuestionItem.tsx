@@ -33,7 +33,8 @@ export const QuestionItem = (props: IProps) => {
       <div> {question} </div>
       <ButtonGroup>
         {[...incorrectAnswer, correctAnswer]
-          .sort((a, b) => 0.5 - Math.random())
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          .sort((a,b) => 0.5 - Math.random())
           .map((answer, index) => (
             <AnswerItem
               key={answer}

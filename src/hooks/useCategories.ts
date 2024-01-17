@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CategoriesService from "../services/categoriesService";
-import { ICategory } from "../services/model";
+import { ICategory } from "../models/catogories";
+
 
 interface IResults {
   categories: ICategory[];

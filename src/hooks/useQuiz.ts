@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import { IQuiz } from "../services/model";
 import QuizService, { IParams } from "../services/quizService";
+import { IQuiz } from "../models/quiz";
 
 interface IResults {
   quiz: IQuiz[];
