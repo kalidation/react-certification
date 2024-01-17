@@ -1,7 +1,7 @@
 {
   "name": "react-certif-exam",
   "private": true,
-  "homepage": "https://kalidation.github.io/react-certification",
+  "homepage": "https://kalidation.github.io/react-certification/",
   "version": "0.4.0",
   "type": "module",
   "scripts": {
