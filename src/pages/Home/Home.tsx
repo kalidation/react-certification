@@ -12,6 +12,7 @@ import { QuestionList } from "../../components/QuestionList";
 import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { ISelectedAnswer } from "./type";
+import { URLS } from "../routes";
 
 export const Home = () => {
   const [category, setCategory] = useState<string>("");
@@ -46,7 +47,7 @@ export const Home = () => {
   };
 
   const handleOnSubmit = () => {
-    navigate("/result", {
+    navigate(URLS.RESULT_URL, {
       state: {
         quiz: quiz,
         selectedAnswer: selectedAnswer,

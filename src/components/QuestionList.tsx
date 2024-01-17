@@ -28,7 +28,7 @@ export const QuestionList = (props: IProps) => {
           questionId={index}
           selectedAnswer={selectedAnswer}
           correctAnswer={quiz.correct_answer}
-          incorrectAnswer={quiz.incorrect_answers}
+          anwers={quiz.answers}
           question={quiz.question}
           handleChangeAnswer={handleChangeAnswer}
           handleScore={handleScore}

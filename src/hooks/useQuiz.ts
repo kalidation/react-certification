@@ -15,7 +15,17 @@ const useQuiz = (params: IParams, excuteOnMount = true): IResults => {
     const categoriesService = new QuizService();
 
     categoriesService.getQuiz({ category, difficulty }).then((res) => {
-      setQuiz(res.results);
+      const randomQuiz: IQuiz[] = res.results.map((result) => {
+        return {
+          ...result,
+          answers: [...result.incorrect_answers, result.correct_answer].sort(
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            (_a, _b) => 0.5 - Math.random()
+          ),
+        };
+      });
+
+      setQuiz(randomQuiz);
     });
   }, []);
 

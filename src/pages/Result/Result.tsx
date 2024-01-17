@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { QuestionList } from "../../components/QuestionList";
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
+import { URLS } from "../routes";
 export const Result = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ export const Result = () => {
         selectedAnswer={state.selectedAnswer}
       />
       <div className={className}>Your scored {score} out of 5</div>
-      <Button id="creatBtn" onClick={() => navigate("/")}>
+      <Button id="creatBtn" onClick={() => navigate(URLS.HOME_URL)}>
         Create a new Quiz
       </Button>
     </div>
